@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}blogs{% endblock %}
+
+{% block content %}
+  <h1>blogs</h1>
+  <p>You have <strong>{{ list.length }}</strong> blogs!</p>
+  <p><a href="/add">Create a blog</a></p>
+  <ul id="posts">
+    {% for item in list %}
+      <li>
+        <h2>{{ item.title }}</h2>
+        <p><a href="/detail?id={{ item.id }}">Read</a></p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

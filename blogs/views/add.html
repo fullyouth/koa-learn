@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}New blog{% endblock %}
+
+{% block content %}
+  <h1>New blog</h1>
+  <p>Create a new blog.</p>
+  <form action="/add" method="post">
+    <p><input type="text" placeholder="Title" name="title"></p>
+    <p><textarea placeholder="Contents" name="content"></textarea></p>
+    <p><input type="submit" value="Create"></p>
+  </form>
+{% endblock %}
